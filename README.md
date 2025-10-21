@@ -8,6 +8,7 @@ Je conçois, installe et maintiens des solutions techniques complètes : postes 
 
 À l’aise à l’oral comme sur le terrain, j’aime le contact direct, les environnements dynamiques et les défis techniques.  
 Extraverti, méthodique et rigoureux, je prends soin de documenter chaque intervention et d’assurer la continuité des services informatiques avec précision.
+Actuellement, je finis aussi ma certfication ITILv4.
 
 ---
 
@@ -37,30 +38,28 @@ Habitude de documenter chaque intervention et de travailler dans des environneme
 
 ---
 
-## Formations & Certifications
+## 🎓 Formations & Certifications
 
-### Technicien en Informatique — IFAGE Genève (Suisse)  
-Juillet 2025  
-Durant cette formation, j’ai appris à installer et configurer des environnements Windows et réseau, à comprendre et administrer Active Directory, à configurer des routeurs Cisco, et à coder un site web complet.  
-Le programme m’a également conduit à rédiger un dossier technique de 70 pages, présenté à l’oral devant jury.
+| **Année** | **Titre / Organisme** | **Compétences principales** | **Document** |
+|------------|-----------------------|-----------------------------|----------------|
+| **2025** | **Technicien en Informatique — IFAGE (Genève)** | Administration Windows / Réseaux / Active Directory / Cisco / Web | [Certificat IFAGE](docs/certif-ifage.pdf) • [Résultats officiels](docs/resultattechinfo.pdf) |
+| **2025** | **Projet d’infrastructure – Étude IFAGE “BULIEU”** | Conception d’un réseau d’entreprise / Windows Server 2022 / NAS / Fortinet / ITIL | [Dossier complet](docs/Dossier-Bulieu-Aly-Final.pdf) |
+| **2024** | **Attestations IFAGE — Réseaux, Matériel PC & Dépannage Windows** | Dépannage, diagnostic, maintenance matérielle et logicielle | [Attestations](docs/attestationx3ifage.pdf) |
+| **2024** | **Cisco Certified Network Associate (CCNA)** | VLAN / Routage / Adressage IP / ACL / Supervision | [Certificat CCNA](docs/ccna_certificate.pdf) • [Lettre Cisco](docs/lettremrrobbins.pdf) |
+| **2024** | **Microsoft Certified : Azure Fundamentals (AZ-900)** | Cloud Computing / Azure Services / Sécurité / Modèles IaaS-PaaS-SaaS | [Certification AZ-900](docs/az900.pdf) |
+| **2019** | **Baccalauréat Technologique STMG – Académie de Créteil** | Management / Gestion / Systèmes d’information | [Diplôme STMG](docs/bac.pdf) |
 
-### Cisco Certified Network Associate (CCNA)  
-Septembre 2024  
-Mon intérêt pour le fonctionnement des réseaux et le goût du challenge technique m’ont conduit à entreprendre une formation autonome rigoureuse.  
-J’y ai approfondi la configuration des VLAN, le routage, l’adressage IP et la mise en œuvre d’ACL sur environnements simulés Cisco Packet Tracer.
+---
 
-### Microsoft Certified: Azure Fundamentals (AZ-900)  
-Janvier 2024  
-Curieux de comprendre la logique du cloud computing, j’ai suivi les cours officiels Microsoft Learn.  
-Cette formation m’a permis d’acquérir une vision claire de la gestion des ressources Azure, du stockage, de la sécurité et des modèles de déploiement cloud.
+### 🏅 Badges de compétences validées
 
-### Certificat de Technicien en Informatique – Attestations IFAGE (2024)  
-Une expérience immersive centrée sur la découverte des fondamentaux du métier :  
-apprentissage du réseau et du dépannage PC, étude des composants matériels, initiation à la réparation et compréhension approfondie du système Windows et de ses mécanismes de diagnostic.
-
-### Baccalauréat Technologique STMG (Sciences et Technologies du Management et de la Gestion)  
-2019  
-Formation technologique orientée entreprise, gestion et systèmes d’information.
+![Azure](https://img.shields.io/badge/Microsoft%20Azure-%230078D4.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Cisco](https://img.shields.io/badge/Cisco%20Networking-%2300498C.svg?style=for-the-badge&logo=cisco&logoColor=white)
+![Windows Server](https://img.shields.io/badge/Windows%20Server-%230078D6.svg?style=for-the-badge&logo=windows&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-%23607C8C.svg?style=for-the-badge&logo=vmware&logoColor=white)
+![ITIL](https://img.shields.io/badge/ITIL%20Principles-%23694BB9.svg?style=for-the-badge)
+![Active Directory](https://img.shields.io/badge/Active%20Directory-%230078D4.svg?style=for-the-badge&logo=windows&logoColor=white)
 
 ---
 
@@ -70,7 +69,7 @@ Formation technologique orientée entreprise, gestion et systèmes d’informati
 Réalisation d’un projet complet d’architecture informatique pour une société fictive suisse spécialisée dans la culture biologique.  
 Mise en place d’une infrastructure Active Directory, serveur Windows Server 2022, NAS Synology, pare-feu Fortinet, réseau Swisscom et processus ITIL de support.  
 Conception du plan IP, stratégie de sauvegarde, GPO, politique de sécurité et documentation technique.  
-**[Consulter le dossier complet (PDF)](./Projet-Bulieu-Aly-Final.pdf)**
+**[Consulter le dossier complet (PDF)](docs/Dossier-Bulieu-Aly-Final.pdf)**
 
 ---
 
@@ -95,45 +94,43 @@ Chaque projet a été documenté et validé après intervention.
 
 ---
 
-### Systèmes POS – Chocolaterie artisanale (Haute-Savoie)  
+### Systèmes POS – Chocolaterie artisanale (Haute-Savoie)
 Installation complète des postes de caisse : câblage réseau interne, configuration des imprimantes à tickets et des balances connectées, paramétrage des terminaux de paiement et formation du personnel.  
-**Illustration :**  
-![Chocolaterie – Poste de caisse et balance connectée](borne2.jpg)
 
 ---
 
-### Maintenance de bornes photo Kodak – Points de vente régionaux  
+### Maintenance de bornes photo Kodak – Points de vente régionaux
 Diagnostic, réinstallation logicielle et reconfiguration réseau des bornes photo Kodak.  
 Vérification du lien avec le serveur central et test de transfert d’image.  
 Objectif : rétablir la disponibilité du matériel dans des délais serrés.  
 **Illustrations :**  
-![Borne Kodak en maintenance](borne1.jpg)  
-![Borne Kodak en service](borne2.jpg)
+![Borne Kodak en maintenance](kodak1.jpg)  
+![Borne Kodak en service](kodak2.jpg)
 
 ---
 
-### Installation d’imprimantes réseau et configuration sur postes clients  
+### Installation d’imprimantes réseau et configuration sur postes clients
 Mise en service d’imprimantes HP connectées via DHCP, paramétrage d’adresses IP et intégration sur réseau local.  
 Configuration du serveur d’impression intégré, tests de connectivité et partage multi-postes.  
 **Illustrations :**  
-![Configuration réseau imprimante HP](WhatsApp%20Image%202025-10-21%20à%2003.48.10_8475cb60.jpg)  
-![Interface web de configuration HP](WhatsApp%20Image%202025-10-21%20à%2003.40.42_09b6702d.jpg)
+![Configuration réseau imprimante HP](printer1.jpg)  
+![Interface web de configuration HP](printer2.jpg)
 
 ---
 
-### Maintenance d’infrastructure vidéo et serveurs locaux  
+### Maintenance d’infrastructure vidéo et serveurs locaux
 Diagnostic d’un rack réseau complet : switchs, routeurs, NVR et serveurs de stockage.  
 Vérification de la connectivité des caméras IP, contrôle du câblage et test du système de supervision vidéo.  
 **Illustration :**  
-![Rack réseau et supervision vidéo](WhatsApp%20Image%202025-10-21%20à%2003.51.25_d8bfedd7.jpg)
+![Rack réseau et supervision vidéo](rack1.jpg)
 
 ---
 
 ## Langues
 
 Français : langue maternelle  
-Anglais : professionnel (technique et conversation)  
-Arabe littéraire : courant
+Anglais : professionnel
+
 
 ---
 

@@ -1,252 +1,308 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio – Mohamed Aly</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio professionnel de Mohamed Aly – Technicien informatique (réseaux, systèmes, cloud, support).">
+  <meta name="description" content="Portfolio de Mohamed Aly — Technicien informatique (Réseaux, Cloud, Support). Projets, certifications et missions." />
+
+  <!-- Styles internes pour rester simple -->
   <style>
     :root{
-      --bg:#f7f8fb;
-      --panel:#ffffff;
-      --text:#0e1520;
-      --muted:#5c6a79;
-      --accent:#6e56ff;
-      --accent-2:#3a86ff;
-      --border:#e6e9ef;
-      --chip:#f0f2f7;
-      --good:#1a9c5d;
+      --brand:#0A77D5;
+      --ink:#222;
+      --muted:#555;
+      --bg:#f5f6fa;
+      --card:#fff;
+      --line:#e6e8ee;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
-    a{color:var(--accent-2);text-decoration:none}
-    a:hover{opacity:.85}
-    .wrap{max-width:1000px;margin:0 auto;padding:28px 18px 60px}
-    header{display:flex;gap:18px;align-items:center;margin:8px 0 18px}
-    header img.logo{width:68px;height:68px;border-radius:50%;background:#fff;object-fit:contain;padding:6px;box-shadow:0 0 0 2px var(--border)}
-    h1{font-size:32px;line-height:1.2;margin:0}
-    .lead{color:var(--muted);margin-top:6px}
-    .panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 18px;box-shadow:0 1px 2px rgba(20,25,30,.04)}
-    section{margin:20px 0}
-    h2{font-size:22px;margin:0 0 10px}
-    h3{font-size:18px;margin:14px 0 8px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:800px){.grid.two{grid-template-columns:1fr 1fr}}
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:var(--chip);border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:13px}
-    .badges img{height:28px;margin:4px 6px 0 0}
-    table{width:100%;border-collapse:collapse;border:1px solid var(--border);background:var(--panel);border-radius:12px;overflow:hidden}
-    th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
-    th{background:#f2f4f9;text-align:left;font-weight:600}
-    tr:last-child td{border-bottom:0}
-    .btn{display:inline-block;background:var(--accent);color:#fff;border-radius:10px;padding:8px 12px;font-weight:600;border:0}
-    .btn.secondary{background:#e9e8ff;color:#4238b0}
-    .cards{display:grid;gap:14px}
-    @media(min-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(20,25,30,.04)}
-    .card img{width:100%;height:230px;object-fit:cover;background:#eef1f6}
-    .card .body{padding:12px 14px}
+    body{
+      margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+      color:var(--ink); background:var(--bg); line-height:1.6;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Header & nav */
+    header{
+      background:#fff; border-bottom:1px solid var(--line);
+      padding:26px 16px;
+    }
+    .wrap{max-width:1100px; margin:0 auto; padding:0 16px}
+    .top{
+      display:flex; align-items:center; gap:16px; justify-content:space-between; flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+    }
+    .brand img{width:44px; height:44px; object-fit:contain}
+    .brand h1{margin:0; font-size:1.4rem}
+    .brand p{margin:2px 0 0; color:var(--muted); font-size:.95rem}
+
+    nav{display:flex; gap:16px; flex-wrap:wrap}
+    nav a{padding:8px 10px; border-radius:8px; border:1px solid var(--line); background:#fff}
+    nav a:hover{background:#f2f8ff; border-color:#cfe6ff}
+
+    /* Sections */
+    section{padding:42px 0}
+    h2{
+      margin:0 0 18px; padding-left:10px; border-left:4px solid var(--brand);
+      font-size:1.35rem; color:#111;
+    }
+    .grid{
+      display:grid; gap:22px;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Cards / projets */
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+      box-shadow:0 2px 8px rgba(0,0,0,.05); transition:.25s;
+    }
+    .card:hover{transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,.12)}
+    .thumb{width:100%; height:220px; object-fit:cover; background:#ddd}
+    .card-body{padding:18px}
+    .card h3{margin:0 0 8px; font-size:1.05rem}
+    .card p{margin:0; color:var(--muted); font-size:.96rem}
     .muted{color:var(--muted)}
-    .ok{color:var(--good);font-weight:600}
-    footer{margin-top:26px;color:var(--muted)}
-    .links a{margin-right:12px}
-    .hr{height:1px;background:var(--border);margin:18px 0}
-    code.inline{background:#f2f4f9;border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-family:ui-monospace,Menlo,Consolas,monospace}
+
+    /* Table */
+    table{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden}
+    th,td{padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+    th{background:#fafbff; text-align:left; font-weight:600}
+    tr:last-child td{border-bottom:none}
+
+    /* Footer */
+    footer{
+      border-top:1px solid var(--line); background:#fff; padding:36px 0; margin-top:40px;
+      text-align:center; color:var(--muted)
+    }
+    .contact a{margin:0 8px}
+
+    /* Utilities */
+    .lead{font-size:1.02rem}
+    .tagline{margin-top:4px}
+    @media (max-width:700px){
+      .brand h1{font-size:1.2rem}
+      .thumb{height:200px}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img class="logo" src="ALYMOHAMEDEV.png" alt="Logo Aly Mohamed">
-      <div>
-        <h1>Portfolio – Mohamed Aly</h1>
-        <div class="lead">Technicien informatique polyvalent (réseaux, systèmes, cloud, support). Basé dans l’Ain.</div>
-      </div>
-    </header>
 
-    <section class="panel">
+  <!-- Header -->
+  <header>
+    <div class="wrap top">
+      <div class="brand">
+        <!-- Si tu veux afficher ton logo: remets le fichier et dé-commente la ligne ci-dessous
+        <img src="ALYMOHAMEDEV.png" alt="Logo Mohamed Aly">
+        -->
+        <div>
+          <h1>Portfolio – Mohamed Aly</h1>
+          <p class="tagline">Technicien Informatique — Réseaux · Cloud · Support</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#profil">Profil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#formations">Formations & Certifs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Profil -->
+    <section id="profil">
       <h2>Profil</h2>
-      <p>Technicien informatique polyvalent basé dans l’Ain. J’exerce en <strong>freelance depuis mars 2025</strong>. En parallèle, j’ai obtenu le <strong>Certificat de Technicien en Informatique</strong> à Genève, validé en juillet 2025. J’ai mené de front mon activité freelance et la préparation du certificat, <strong>en autonomie</strong>, grâce à une <strong>organisation solide</strong> et une <strong>gestion multi-projets</strong> efficace.</p>
-      <p>Je conçois, installe et maintiens des solutions techniques complètes : postes utilisateurs, réseaux, périphériques, cloud et sécurité.</p>
-      <p>À l’aise à l’oral comme sur le terrain, j’aime le contact direct, les environnements dynamiques et les défis techniques. Extraverti, méthodique et rigoureux, je documente chaque intervention et veille à la continuité de service. <strong>Actuellement, je finalise la certification ITIL v4.</strong></p>
-    </section>
-
-    <section class="grid two">
-      <div class="panel">
-        <h2>Compétences techniques</h2>
-        <h3>Réseaux &amp; Infrastructure</h3>
-        <div class="chips">
-          <span class="chip">Cisco (switch/routeur)</span>
-          <span class="chip">VLAN & routage inter-VLAN</span>
-          <span class="chip">IPv4, DHCP, DNS</span>
-          <span class="chip">Wireshark</span>
-          <span class="chip">Wi-Fi pro</span>
-          <span class="chip">NAS & sauvegarde</span>
-        </div>
-        <h3>Systèmes &amp; Administration</h3>
-        <div class="chips">
-          <span class="chip">Windows 10/11</span>
-          <span class="chip">Active Directory & GPO</span>
-          <span class="chip">VMware / Hyper-V</span>
-          <span class="chip">Office 365</span>
-          <span class="chip">Imprimantes réseau</span>
-        </div>
-        <h3>Sécurité &amp; Supervision</h3>
-        <div class="chips">
-          <span class="chip">Contrôle d’accès</span>
-          <span class="chip">Détection d’anomalies</span>
-          <span class="chip">Journaux d’événements</span>
-          <span class="chip">Pare-feu local</span>
-          <span class="chip">RGPD (bonnes pratiques)</span>
-        </div>
-        <h3>Cloud &amp; Automatisation</h3>
-        <div class="chips">
-          <span class="chip">Azure (VM, App Service, Storage, Monitor)</span>
-          <span class="chip">IaaS / PaaS</span>
-          <span class="chip">PowerShell / Bash</span>
-          <span class="chip">GitHub Pages & Actions</span>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h2>Qualités professionnelles</h2>
-        <p class="muted">Rigueur, autonomie, capacité d’analyse, curiosité technique, extraversion, sens du service. Habitude de documenter chaque intervention et de travailler en multi-sites.</p>
-        <div class="hr"></div>
-        <h3>Badges de compétences validées</h3>
-        <div class="badges">
-          <img alt="Azure" src="https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white">
-          <img alt="Cisco" src="https://img.shields.io/badge/Cisco%20Networking-00498C?style=for-the-badge&logo=cisco&logoColor=white">
-          <img alt="Windows Server" src="https://img.shields.io/badge/Windows%20Server-0078D6?style=for-the-badge&logo=windows&logoColor=white">
-          <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white">
-          <img alt="VMware" src="https://img.shields.io/badge/VMware-607C8C?style=for-the-badge&logo=vmware&logoColor=white">
-          <img alt="ITIL" src="https://img.shields.io/badge/ITIL%20Principles-694BB9?style=for-the-badge">
-          <img alt="Active Directory" src="https://img.shields.io/badge/Active%20Directory-0078D4?style=for-the-badge&logo=windows&logoColor=white">
-        </div>
-        <div class="hr"></div>
-        <h3>Contact</h3>
-        <p class="links">
-          <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
-          <a href="https://github.com/alymohamedev">GitHub</a> ·
-          <a href="https://www.linkedin.com/in/alymohamedev">LinkedIn</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>Formations & Certifications</h2>
-      <table>
-        <thead>
-          <tr><th>Année</th><th>Titre / Organisme</th><th>Compétences principales</th><th>Document</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>2025</strong></td>
-            <td><strong>Technicien en Informatique — IFAGE (Genève)</strong></td>
-            <td>Administration Windows / Réseaux / Active Directory / Cisco / Web</td>
-            <td>
-              <a class="btn" href="docs/certif-ifage.pdf">Certificat IFAGE</a>
-              <a class="btn secondary" href="docs/resultattechinfo.pdf">Résultats officiels</a>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>2025</strong></td>
-            <td><strong>Projet d’infrastructure – Étude IFAGE “BULIEU”</strong></td>
-            <td>Conception d’un réseau d’entreprise / Windows Server 2022 / NAS / Fortinet / ITIL</td>
-            <td><a class="btn" href="docs/Dossier-Bulieu-Aly-Final.pdf">Dossier complet</a></td>
-          </tr>
-          <tr>
-            <td><strong>2024</strong></td>
-            <td><strong>Attestations IFAGE — Réseaux, Matériel PC & Dépannage Windows</strong></td>
-            <td>Dépannage, diagnostic, maintenance matérielle et logicielle</td>
-            <td><a class="btn" href="docs/attestationx3ifage.pdf">Attestations</a></td>
-          </tr>
-          <tr>
-            <td><strong>2024</strong></td>
-            <td><strong>Cisco Certified Network Associate (CCNA)</strong></td>
-            <td>VLAN / Routage / Adressage IP / ACL / Supervision</td>
-            <td>
-              <a class="btn" href="docs/ccna_certificate.pdf">Certificat CCNA</a>
-              <a class="btn secondary" href="docs/lettremrrobbins.pdf">Lettre Cisco</a>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>2024</strong></td>
-            <td><strong>Microsoft Certified : Azure Fundamentals (AZ-900)</strong></td>
-            <td>Cloud Computing / Azure Services / Sécurité / Modèles IaaS-PaaS-SaaS</td>
-            <td><a class="btn" href="docs/az900.pdf">Certification AZ-900</a></td>
-          </tr>
-          <tr>
-            <td><strong>2019</strong></td>
-            <td><strong>Baccalauréat Technologique STMG – Académie de Créteil</strong></td>
-            <td>Management / Gestion / Systèmes d’information</td>
-            <td><a class="btn" href="docs/bac.pdf">Diplôme STMG</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="panel">
-      <h2>Projets & Réalisations</h2>
-      <div class="cards">
-
-        <article class="card">
-          <img src="kodak1.jpg" alt="Borne Kodak en maintenance">
-          <div class="body">
-            <h3>Maintenance de bornes photo Kodak – Points de vente régionaux</h3>
-            <p class="muted">
-              Diagnostic, réinstallation logicielle et reconfiguration réseau des bornes photo Kodak.
-              Vérification du lien avec le serveur central et test de transfert d’image.
-              <span class="ok">Objectif : disponibilité rétablie.</span>
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="kodak2.jpg" alt="Borne Kodak en service">
-          <div class="body">
-            <h3>Borne Kodak – Phase de remise en service</h3>
-            <p class="muted">
-              Après maintenance, test du flux réseau et validation de la communication avec le serveur central.
-              Vérification de la stabilité et des délais de transfert d’images.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="printer2.jpg" alt="Interface web de configuration HP">
-          <div class="body">
-            <h3>Installation d’imprimantes réseau et configuration postes</h3>
-            <p class="muted">
-              Mise en service HP en DHCP, paramétrage IP, partage multi-postes et tests de connectivité.
-              Serveur d’impression intégré.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="rack1.jpg" alt="Rack réseau et supervision vidéo">
-          <div class="body">
-            <h3>Maintenance d’infrastructure vidéo & serveurs locaux</h3>
-            <p class="muted">
-              Contrôle d’un rack complet : switchs, routeurs, NVR et stockage.
-              Vérification du câblage, caméras IP et supervision vidéo.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <footer class="panel">
-      <h2>Langues & Contact</h2>
-      <p>Français : langue maternelle — Anglais : professionnel.</p>
-      <p class="links">
-        <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
-        <a href="https://github.com/alymohamedev">github.com/alymohamedev</a> ·
-        <a href="https://www.linkedin.com/in/alymohamedev">linkedin.com/in/alymohamedev</a>
+      <p class="lead">
+        Technicien informatique polyvalent basé dans l’Ain. J’exerce en <strong>freelance depuis mars 2025</strong> et j’ai obtenu
+        le <strong>Certificat de Technicien en Informatique (IFAGE Genève)</strong> en juillet 2025.
+        Organisation stricte, exécution propre, documentation systématique.
       </p>
-      <div class="muted">Site statique généré via GitHub Pages. Dépôt : <code class="inline">Aly-Mohamed-Portfolio</code>.</div>
-    </footer>
-  </div>
+      <p class="muted">
+        À l’aise à l’oral et sur le terrain, j’interviens sur des environnements Windows, réseaux Cisco, Azure et postes utilisateurs.
+        J’avance vite sans casser, et je sais mener plusieurs chantiers en parallèle sans perdre en qualité.
+      </p>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences">
+      <h2>Compétences techniques</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <h3>Réseaux & Infrastructure</h3>
+            <p>Switching/routage Cisco, VLAN & inter-VLAN, IPv4, DHCP, DNS, supervision, Wi-Fi pro, NAS, schémas & doc.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Systèmes & Administration</h3>
+            <p>Windows 10/11, <strong>Active Directory</strong>, GPO/ACL, VMware & Hyper-V, imprimantes réseau, sauvegardes, Microsoft 365.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Sécurité & Supervision</h3>
+            <p>Contrôle d’accès, analyse d’anomalies, journaux d’événements, pare-feu local, bonnes pratiques poste/serveur, RGPD.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Cloud & Automatisation</h3>
+            <p>Azure (VM, App Service, Storage, Monitoring), coûts, scripts PowerShell/Bash, GitHub Pages/Actions, IaaS & PaaS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets">
+      <h2>Projets & Réalisations</h2>
+      <div class="grid">
+
+        <!-- Kodak 1 -->
+        <article class="card">
+          <img class="thumb" src="kodak1.jpg" alt="Maintenance borne Kodak">
+          <div class="card-body">
+            <h3>Maintenance de bornes photo Kodak — Points de vente régionaux</h3>
+            <p>Diagnostic, réinstallation logicielle et reconfiguration réseau. Vérification du lien serveur
+              et tests de transfert d’image. <strong>Objectif : disponibilité rétablie.</strong></p>
+          </div>
+        </article>
+
+        <!-- Kodak 2 -->
+        <article class="card">
+          <img class="thumb" src="kodak2.jpg" alt="Borne Kodak remise en service">
+          <div class="card-body">
+            <h3>Borne Kodak — Phase de remise en service</h3>
+            <p>Validation du flux réseau et de la communication avec le serveur central.
+              Tests de stabilité et délais de transfert en conditions réelles.</p>
+          </div>
+        </article>
+
+        <!-- Imprimantes 1 -->
+        <article class="card">
+          <img class="thumb" src="printer1.jpg" alt="Imprimante réseau HP">
+          <div class="card-body">
+            <h3>Déploiement d’imprimantes réseau — Multi-postes</h3>
+            <p>Mise en service sous DHCP, configuration IP, partage multi-utilisateurs.
+              Intégration au réseau local et serveur d’impression intégré.</p>
+          </div>
+        </article>
+
+        <!-- Imprimantes 2 -->
+        <article class="card">
+          <img class="thumb" src="printer2.jpg" alt="Interface web imprimante HP">
+          <div class="card-body">
+            <h3>Administration via interface web — Imprimantes HP</h3>
+            <p>Tests de connectivité, gestion du pool d’impression, paramétrage comptes,
+              suivi de performance et documentation.</p>
+          </div>
+        </article>
+
+        <!-- Rack vidéo -->
+        <article class="card">
+          <img class="thumb" src="rack1.jpg" alt="Rack réseau et NVR">
+          <div class="card-body">
+            <h3>Maintenance d’infrastructure vidéo & serveurs locaux</h3>
+            <p>Contrôle d’un rack complet : switchs/routeurs, NVR, stockage.
+              Vérification du câblage, caméras IP et supervision en temps réel.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Formations / Certifications -->
+    <section id="formations">
+      <h2>Formations & Certifications</h2>
+      <div class="muted" style="margin-bottom:10px">
+        Documents hébergés dans <code>/docs</code>. Tous les liens ci-dessous pointent vers les originaux PDF.
+      </div>
+      <div style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Année</th>
+              <th>Titre / Organisme</th>
+              <th>Compétences principales</th>
+              <th>Document</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025</td>
+              <td>Technicien en Informatique — IFAGE (Genève)</td>
+              <td>Administration Windows · Réseaux · Active Directory · Cisco · Web</td>
+              <td>
+                <a href="docs/certif-ifage.pdf">Certificat IFAGE</a> ·
+                <a href="docs/resultattechinfo.pdf">Résultats officiels</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td>Projet d’infrastructure IFAGE “BULIEU”</td>
+              <td>Windows Server 2022 · AD/GPO · NAS Synology · Fortinet · ITIL · Sauvegardes</td>
+              <td><a href="docs/Dossier-Bulieu-Aly-Final.pdf">Dossier complet (PDF)</a></td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td>Attestations IFAGE — Réseaux, Matériel PC & Dépannage Windows</td>
+              <td>Dépannage · Diagnostic · Maintenance matérielle & logicielle</td>
+              <td><a href="docs/attestationx3ifage.pdf">Attestations (PDF)</a></td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td>Cisco Certified Network Associate (CCNA)</td>
+              <td>VLAN · Routage · Adressage IP · ACL · Supervision</td>
+              <td>
+                <a href="docs/ccna_certificate.pdf">Certificat CCNA</a> ·
+                <a href="docs/lettremrrobbins.pdf">Lettre Cisco</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td>Microsoft Certified: Azure Fundamentals (AZ-900)</td>
+              <td>Cloud computing · Azure Services · Sécurité · IaaS/PaaS/SaaS</td>
+              <td><a href="docs/az900.pdf">Certification AZ-900</a></td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>Baccalauréat Technologique STMG — Académie de Créteil</td>
+              <td>Management · Gestion · Systèmes d’information</td>
+              <td><a href="docs/bac.pdf">Diplôme STMG</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Contact (unique) -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="lead">
+        Email : <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> —
+        GitHub : <a href="https://github.com/alymohamedev">github.com/alymohamedev</a> —
+        LinkedIn : <a href="https://www.linkedin.com/in/alymohamedev/">linkedin.com/in/alymohamedev</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="contact">
+        <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
+        <a href="https://github.com/alymohamedev">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/alymohamedev/">LinkedIn</a>
+      </p>
+      <p>© 2025 Mohamed Aly — Tous droits réservés</p>
+    </div>
+  </footer>
+
 </body>
 </html>

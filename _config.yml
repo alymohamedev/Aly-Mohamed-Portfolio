@@ -4,3 +4,18 @@ description: "Portfolio professionnel — Technicien informatique, Réseaux, Sys
 show_downloads: false
 theme: jekyll-theme-minimal
 lang: fr
+
+# Personnalisation du thème
+color_scheme: light
+
+# Couleurs principales (adaptées à ton logo)
+header_pages:
+  - README.md
+
+# Variables CSS personnalisées (fonctionne avec Jekyll Minimal)
+sass:
+  style: compressed
+
+# Fichier CSS personnalisé
+include:
+  - assets/css/style.scss

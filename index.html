@@ -1,11 +1,235 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mohamed Aly – Portfolio</title>
-  </head>
-  <body>
-    <h1>Bienvenue sur mon portfolio</h1>
-    <p>Site en construction, première version test pour GitHub Pages.</p>
-  </body>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio – Mohamed Aly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio professionnel de Mohamed Aly – Technicien informatique (réseaux, systèmes, cloud, support).">
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#11141a;
+      --text:#e9eef5;
+      --muted:#b7c1cc;
+      --accent:#7b5cff;
+      --accent-2:#4cc2ff;
+      --border: #202635;
+      --chip:#1a1f2b;
+      --good:#29cf7f;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
+    a{color:var(--accent-2);text-decoration:none}
+    a:hover{opacity:.85}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px 18px 60px}
+    header{display:flex;gap:18px;align-items:center;margin:8px 0 18px}
+    header img.logo{width:68px;height:68px;border-radius:50%;background:#fff;object-fit:contain;padding:6px;box-shadow:0 0 0 2px var(--border)}
+    h1{font-size:32px;line-height:1.2;margin:0}
+    .lead{color:var(--muted);margin-top:6px}
+    .panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 18px}
+    section{margin:20px 0}
+    h2{font-size:22px;margin:0 0 10px}
+    h3{font-size:18px;margin:14px 0 8px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:800px){.grid.two{grid-template-columns:1fr 1fr}}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:13px}
+    .badges img{height:28px;margin:4px 6px 0 0}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--border);background:var(--panel);border-radius:12px;overflow:hidden}
+    th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+    th{background:#151a22;text-align:left;font-weight:600}
+    tr:last-child td{border-bottom:0}
+    .btn{display:inline-block;background:var(--accent);color:#fff;border-radius:10px;padding:8px 12px;font-weight:600;border:0}
+    .btn.secondary{background:#1e2433}
+    .cards{display:grid;gap:14px}
+    @media(min-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+    .card img{width:100%;height:230px;object-fit:cover;background:#0d0f15}
+    .card .body{padding:12px 14px}
+    .muted{color:var(--muted)}
+    .ok{color:var(--good);font-weight:600}
+    footer{margin-top:26px;color:var(--muted)}
+    .links a{margin-right:12px}
+    .hr{height:1px;background:var(--border);margin:18px 0}
+    code.inline{background:#151a22;border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-family:ui-monospace,Menlo,Consolas,monospace}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="ALYMOHAMEDEV.png" alt="Logo Aly Mohamed">
+      <div>
+        <h1>Portfolio – Mohamed Aly</h1>
+        <div class="lead">Technicien informatique polyvalent (réseaux, systèmes, cloud, support). Basé dans l’Ain.</div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <p>J’exerce en <strong>freelance depuis mars 2025</strong>, en parallèle de la préparation et de l’obtention de mon <strong>Certificat de Technicien en Informatique (IFAGE, Genève – juillet 2025)</strong>. Je conçois, installe et maintiens des solutions techniques complètes : postes utilisateurs, réseaux, périphériques, cloud et sécurité.</p>
+      <p>À l’aise à l’oral comme sur le terrain, j’aime le contact direct, les environnements dynamiques et les défis techniques. Extraverti, méthodique et rigoureux, je documente chaque intervention pour assurer la continuité de service.</p>
+    </section>
+
+    <section class="grid two">
+      <div class="panel">
+        <h2>Compétences techniques</h2>
+        <h3>Réseaux &amp; Infrastructure</h3>
+        <div class="chips">
+          <span class="chip">Cisco (switch/routeur)</span>
+          <span class="chip">VLAN & routage inter-VLAN</span>
+          <span class="chip">IPv4, DHCP, DNS</span>
+          <span class="chip">Wireshark</span>
+          <span class="chip">Wi-Fi pro</span>
+          <span class="chip">NAS & sauvegarde</span>
+        </div>
+        <h3>Systèmes &amp; Administration</h3>
+        <div class="chips">
+          <span class="chip">Windows 10/11</span>
+          <span class="chip">Active Directory & GPO</span>
+          <span class="chip">VMware / Hyper-V</span>
+          <span class="chip">Office 365</span>
+          <span class="chip">Imprimantes réseau</span>
+        </div>
+        <h3>Sécurité &amp; Supervision</h3>
+        <div class="chips">
+          <span class="chip">Contrôle d’accès</span>
+          <span class="chip">Détection d’anomalies</span>
+          <span class="chip">Journaux d’événements</span>
+          <span class="chip">Pare-feu local</span>
+          <span class="chip">RGPD (bonnes pratiques)</span>
+        </div>
+        <h3>Cloud &amp; Automatisation</h3>
+        <div class="chips">
+          <span class="chip">Azure (VM, App Service, Storage, Monitor)</span>
+          <span class="chip">IaaS / PaaS</span>
+          <span class="chip">PowerShell / Bash</span>
+          <span class="chip">GitHub Pages & Actions</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Qualités</h2>
+        <p class="muted">Rigueur, autonomie, capacité d’analyse, curiosité technique, extraversion, sens du service. Habitude de travailler en multi-sites et de documenter chaque intervention.</p>
+        <div class="hr"></div>
+        <h3>Badges de compétences validées</h3>
+        <div class="badges">
+          <img alt="Azure" src="https://img.shields.io/badge/Microsoft%20Azure-%230078D4.svg?style=for-the-badge&logo=microsoftazure&logoColor=white">
+          <img alt="Cisco" src="https://img.shields.io/badge/Cisco%20Networking-%2300498C.svg?style=for-the-badge&logo=cisco&logoColor=white">
+          <img alt="Windows Server" src="https://img.shields.io/badge/Windows%20Server-%230078D6.svg?style=for-the-badge&logo=windows&logoColor=white">
+          <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white">
+          <img alt="VMware" src="https://img.shields.io/badge/VMware-%23607C8C.svg?style=for-the-badge&logo=vmware&logoColor=white">
+          <img alt="ITIL" src="https://img.shields.io/badge/ITIL%20Principles-%23694BB9.svg?style=for-the-badge">
+          <img alt="Active Directory" src="https://img.shields.io/badge/Active%20Directory-%230078D4.svg?style=for-the-badge&logo=windows&logoColor=white">
+        </div>
+        <div class="hr"></div>
+        <h3>Contact</h3>
+        <p class="links">
+          <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
+          <a href="https://github.com/alymohamedev">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/alymohamedev">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Formations & Certifications</h2>
+      <table>
+        <thead>
+          <tr><th>Année</th><th>Titre / Organisme</th><th>Compétences principales</th><th>Documents</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>2025</strong></td>
+            <td><strong>Technicien en Informatique — IFAGE (Genève)</strong></td>
+            <td>Administration Windows / Réseaux / Active Directory / Cisco / Web</td>
+            <td>
+              <a class="btn" href="docs/certif-ifage.pdf">Certificat</a>
+              <a class="btn secondary" href="docs/resultattechinfo.pdf">Résultats</a>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2025</strong></td>
+            <td><strong>Projet d’infrastructure – Étude IFAGE “BULIEU”</strong></td>
+            <td>AD, Windows Server 2022, NAS Synology, Fortinet, ITIL</td>
+            <td><a class="btn" href="docs/Dossier-Bulieu-Aly-Final.pdf">Dossier complet</a></td>
+          </tr>
+          <tr>
+            <td><strong>2024</strong></td>
+            <td><strong>Attestations IFAGE — Réseaux, Matériel PC & Dépannage Windows</strong></td>
+            <td>Dépannage, diagnostic, maintenance matérielle et logicielle</td>
+            <td><a class="btn" href="docs/attestationx3ifage.pdf">Voir</a></td>
+          </tr>
+          <tr>
+            <td><strong>2024</strong></td>
+            <td><strong>Cisco Certified Network Associate (CCNA)</strong></td>
+            <td>VLAN / Routage / IP / ACL / Supervision</td>
+            <td>
+              <a class="btn" href="docs/ccna_certificate.pdf">Certificat</a>
+              <a class="btn secondary" href="docs/lettremrrobbins.pdf">Lettre Cisco</a>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2024</strong></td>
+            <td><strong>Microsoft Certified : Azure Fundamentals (AZ-900)</strong></td>
+            <td>Cloud Azure, sécurité, modèles IaaS/PaaS/SaaS</td>
+            <td><a class="btn" href="docs/az900.pdf">Certification</a></td>
+          </tr>
+          <tr>
+            <td><strong>2019</strong></td>
+            <td><strong>Baccalauréat Technologique STMG – Académie de Créteil</strong></td>
+            <td>Management, gestion, systèmes d’information</td>
+            <td><a class="btn" href="docs/bac.pdf">Diplôme</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Projets & Réalisations</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="printer1.jpg" alt="Poste de caisse et balance connectée">
+          <div class="body">
+            <h3>Systèmes POS – Chocolaterie artisanale (Haute-Savoie)</h3>
+            <p class="muted">Installation complète des postes de caisse : câblage réseau interne, imprimantes tickets, balances connectées, TPE, et formation du personnel.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="kodak1.jpg" alt="Borne Kodak en maintenance">
+          <div class="body">
+            <h3>Maintenance de bornes photo Kodak – Régional</h3>
+            <p class="muted">Diagnostic, réinstallation logicielle et reconfiguration réseau. Vérification du lien avec le serveur central, tests de transfert d’image. <span class="ok">Objectif : disponibilité rétablie.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="printer2.jpg" alt="Interface web de configuration HP">
+          <div class="body">
+            <h3>Imprimantes réseau – Déploiement multi-postes</h3>
+            <p class="muted">Mise en service HP en DHCP, adressage IP, partage et tests de connectivité. Serveur d’impression intégré.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="rack1.jpg" alt="Rack réseau et supervision vidéo">
+          <div class="body">
+            <h3>Vidéo-surveillance & serveurs locaux</h3>
+            <p class="muted">Contrôle d’un rack complet : switchs, routeurs, NVR, stockage. Vérification du câblage, caméra IP et supervision vidéo.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="panel">
+      <h2>Langues & Contact</h2>
+      <p>Français : langue maternelle — Anglais : professionnel — Arabe littéraire : courant.</p>
+      <p class="links">
+        <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
+        <a href="https://github.com/alymohamedev">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/alymohamedev">LinkedIn</a>
+      </p>
+      <div class="muted">Site statique généré via GitHub Pages. Dépôt : <code class="inline">Aly-Mohamed-Portfolio</code>.</div>
+    </footer>
+  </div>
+</body>
 </html>

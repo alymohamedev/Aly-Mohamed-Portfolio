@@ -1,84 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio – Mohamed Aly</title>
-  <meta name="description" content="Portfolio professionnel de Mohamed Aly — Technicien informatique (Réseaux, Systèmes, Cloud, Support)." />
+  <meta name="description" content="Technicien IT — Réseaux, Systèmes, Cloud, Support. Projets terrain et certifications." />
 
-  <!-- Style minimal clair et technique -->
   <style>
     :root{
-      --bg:#f6f7fb;
-      --panel:#ffffff;
-      --txt:#0f172a;
-      --muted:#475569;
-      --primary:#2563eb;
-      --primary-ghost:#e5edff;
-      --ok:#16a34a;
-      --warn:#eab308;
-      --shadow:0 6px 24px rgba(2,6,23,.06), 0 2px 8px rgba(2,6,23,.06);
-      --radius:14px;
+      --bg:#f7f8fb; --card:#ffffff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb;
+      --brand:#2563eb; --brand-ink:#0b3ea0; --pill:#e8f0ff;
+      --ok:#059669; --shadow:0 6px 18px rgba(17,24,39,.08);
+      --radius:16px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    a{color:var(--primary);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{
-      position:sticky;top:0;z-index:50;background:rgba(246,247,251,.85);
-      backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid #e5e7eb;
-    }
-    .topbar{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{width:40px;height:40px;object-fit:contain}
-    nav{display:flex;gap:10px;flex-wrap:wrap}
-    nav a{
-      padding:8px 12px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;
-      text-decoration:none;color:var(--muted);font-weight:600;font-size:14px;
-    }
-    nav a:hover{background:var(--primary-ghost);border-color:#dbeafe;color:var(--primary)}
-    h1,h2{letter-spacing:.2px}
-    section{margin:28px 0}
-    .panel{background:var(--panel);border:1px solid #e5e7eb;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .lead{font-size:15.5px;color:var(--muted);line-height:1.6}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width:980px){.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:680px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-
-    .pill{display:inline-block;padding:2px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:600;font-size:12px}
-    .card{background:var(--panel);border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-    .card .thumb{width:100%;height:210px;object-fit:cover;background:#f1f5f9;border-bottom:1px solid #e5e7eb}
-    .card .body{padding:14px}
+    *,*:before,*:after{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue","Apple Color Emoji","Segoe UI Emoji",sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{color:var(--brand-ink);text-decoration:underline}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    header.nav{position:sticky;top:0;background:rgba(247,248,251,.9);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:100}
+    .row{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;letter-spacing:.2px}
+    .nav a{padding:8px 14px;border-radius:10px}
+    .nav a:hover{background:#eef2ff}
+    h1{margin:0;font-size:28px}
+    h2{font-size:22px;margin:0 0 14px}
+    h3{font-size:18px;margin:0 0 8px}
+    .section{margin:28px 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
     .muted{color:var(--muted)}
-    .ok{color:var(--ok);font-weight:700}
-    .danger-outline{outline:3px solid #ef4444aa}
-
-    table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;background:#fff;box-shadow:var(--shadow)}
-    thead th{background:#f8fafc;text-align:left;padding:12px 14px;font-size:14px;border-bottom:1px solid #e5e7eb}
-    tbody td{padding:12px 14px;border-bottom:1px solid #eef2f7;vertical-align:top}
-    tbody tr:last-child td{border-bottom:none}
-    .kicker{display:flex;align-items:center;gap:8px;color:#1f2937;font-size:20px;font-weight:800;margin:10px 0 16px}
-    .bar{width:4px;height:20px;background:var(--primary);border-radius:2px}
-    footer{margin:36px 0 24px;padding:18px;background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .contacts a{margin-right:14px}
+    .pill{display:inline-block;font-size:12px;background:var(--pill);color:var(--brand-ink);padding:4px 10px;border-radius:999px;border:1px solid #d9e5ff}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media(max-width:980px){.grid-3{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){.grid-3,.grid-2{grid-template-columns:1fr}}
+    figure{margin:0}
+    .thumb{width:100%;height:220px;border-radius:14px;object-fit:cover;border:1px solid var(--line);background:#f2f4f8}
+    .danger-outline{outline:2px dashed #ef4444;outline-offset:4px}
+    table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+    th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{background:#f4f6fb;text-align:left;font-weight:600}
+    tr:last-child td{border-bottom:none}
+    .ok{color:var(--ok);font-weight:600}
+    footer{color:var(--muted);text-align:center;padding:26px 0}
   </style>
 </head>
-
 <body>
-  <!-- Header -->
-  <header>
-    <div class="wrap topbar">
-      <div class="brand">
-        <img src="ALYMOHAMEDEV.png" alt="Logo Mohamed Aly">
-        <div>
-          <div style="font-size:18px;font-weight:900">Portfolio – Mohamed Aly</div>
-          <div class="muted" style="font-size:13px">Technicien Informatique — Réseaux · Systèmes · Cloud · Support</div>
-        </div>
-      </div>
-      <nav>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap row">
+      <div class="logo">Portfolio – Mohamed Aly</div>
+      <nav class="nav">
         <a href="#profil">Profil</a>
         <a href="#skills">Compétences</a>
         <a href="#projects">Projets</a>
@@ -89,130 +63,113 @@
   </header>
 
   <main class="wrap">
-
-    <!-- Profil -->
-    <section id="profil" class="panel" style="padding:18px 18px 8px">
-      <div class="kicker"><span class="bar"></span>Profil</div>
-      <p class="lead">
-        Technicien informatique polyvalent basé dans l’Ain. J’exerce <b>en freelance depuis mars 2025</b> et j’ai obtenu le
-        <b>Certificat de Technicien en Informatique (IFAGE Genève)</b> en <b>juillet 2025</b>.
-        Organisation stricte, exécution propre, documentation systématique.
+    <!-- PROFIL -->
+    <section id="profil" class="section card">
+      <h2>Profil</h2>
+      <p>
+        Technicien informatique polyvalent basé dans l’Ain. J’exerce <strong>en freelance depuis mars 2025</strong> et j’ai obtenu le
+        <strong>Certificat de Technicien en Informatique (IFAGE Genève)</strong> en juillet 2025.
       </p>
-      <p class="lead">
-        À l’aise à l’oral et sur le terrain, j’interviens sur des environnements Windows, réseaux Cisco, Azure et postes utilisateurs.
-        J’avance vite sans casser, et je sais mener plusieurs chantiers en parallèle sans perdre en qualité.
+      <p class="muted">
+        À l’aise à l’oral comme sur le terrain, j’interviens sur environnements Windows, réseaux Cisco, Azure et postes utilisateurs.
+        J’avance vite sans casser et je garde la qualité : documentation claire, exécution propre, continuité de service.
       </p>
     </section>
 
-    <!-- Compétences -->
-    <section id="skills">
-      <div class="kicker"><span class="bar"></span>Compétences techniques</div>
-      <div class="grid cols-3">
-        <div class="panel" style="padding:14px">
-          <div class="pill">Réseaux & Infrastructure</div>
-          <p class="muted" style="margin-top:8px">
-            Switching/routage Cisco, VLAN & inter-VLAN, IPv4, DHCP, DNS, supervision, Wi-Fi pro, NAS, schémas & doc.
-          </p>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Compétences techniques</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="pill">Réseaux & Infrastructure</span>
+          <h3 style="margin-top:10px">Switching & Routage</h3>
+          <p class="muted">Cisco (VLAN, inter-VLAN), IPv4, DHCP, DNS, Wi-Fi pro, NAS, supervision, schémas & doc.</p>
         </div>
-        <div class="panel" style="padding:14px">
-          <div class="pill">Systèmes & Administration</div>
-          <p class="muted" style="margin-top:8px">
-            Windows 10/11, <b>Active Directory</b>, GPO/ACL, VMware & Hyper-V, imprimantes réseau, sauvegardes, Microsoft 365.
-          </p>
+        <div class="card">
+          <span class="pill">Systèmes & Administration</span>
+          <h3 style="margin-top:10px">Windows, AD & Impressions</h3>
+          <p class="muted">Windows 10/11, <strong>Active Directory</strong>, GPO/ACL, VMware & Hyper-V, imprimantes réseau, sauvegardes, Microsoft 365.</p>
         </div>
-        <div class="panel" style="padding:14px">
-          <div class="pill">Sécurité & Supervision</div>
-          <p class="muted" style="margin-top:8px">
-            Contrôle d’accès, détection d’anomalies, journaux d’événements, pare-feu local, bonnes pratiques poste/serveur, RGPD.
-          </p>
+        <div class="card">
+          <span class="pill">Sécurité & Supervision</span>
+          <h3 style="margin-top:10px">Hygiène & Contrôles</h3>
+          <p class="muted">Contrôle d’accès, détection d’anomalies, journaux d’événements, pare-feu local, bonnes pratiques poste/serveur, RGPD.</p>
         </div>
-        <div class="panel" style="padding:14px">
-          <div class="pill">Cloud & Automatisation</div>
-          <p class="muted" style="margin-top:8px">
-            Azure (VM, App Service, Storage, Monitoring), coûts, scripts PowerShell/Bash, GitHub Pages/Actions, IaaS & PaaS.
-          </p>
+        <div class="card">
+          <span class="pill">Cloud & Automatisation</span>
+          <h3 style="margin-top:10px">Azure & Scripting</h3>
+          <p class="muted">Azure (VM, App Service, Storage, Monitoring), estimation des coûts, scripts PowerShell/Bash, GitHub Pages/Actions, IaaS & PaaS.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projets -->
-    <section id="projects">
-      <div class="kicker"><span class="bar"></span>Projets & Réalisations</div>
-
-      <div class="grid cols-3">
-        <!-- Kodak 1 -->
+    <!-- PROJETS -->
+    <section id="projects" class="section">
+      <h2>Projets & Réalisations</h2>
+      <div class="grid grid-3">
+        <!-- KODAK 1 (fichier avec extension particulière) -->
         <article class="card">
-          <img class="thumb" src="kodak1.jpg" alt="Maintenance borne Kodak — région">
-          <div class="body">
-            <h3 style="margin:0 0 6px">Maintenance de bornes photo Kodak — Points de vente régionaux</h3>
-            <p class="muted" style="margin:0">
-              Diagnostic, réinstallation logicielle et reconfiguration réseau. Vérification du lien serveur et tests de transfert d’image.
-              <span class="ok">Objectif : disponibilité rétablie.</span>
-            </p>
-          </div>
+          <figure><img class="thumb" src="kodak1.jg.jpg" alt="Maintenance borne Kodak – région" /></figure>
+          <h3 style="margin-top:12px">Maintenance de bornes photo Kodak — Points de vente régionaux</h3>
+          <p class="muted">
+            Diagnostic, réinstallation logicielle et reconfiguration réseau. Vérification du lien serveur et tests de transfert d’image.
+            <span class="ok">Objectif : disponibilité rétablie.</span>
+          </p>
         </article>
 
-        <!-- Kodak 2 -->
+        <!-- KODAK 2 -->
         <article class="card">
-          <img class="thumb" src="kodak2.jpg" alt="Borne Kodak remise en service">
-          <div class="body">
-            <h3 style="margin:0 0 6px">Borne Kodak — Phase de remise en service</h3>
-            <p class="muted" style="margin:0">
-              Validation du flux réseau et de la communication avec le serveur central. Tests de stabilité et délais de transfert en conditions réelles.
-            </p>
-          </div>
+          <figure><img class="thumb" src="kodak2.jpg" alt="Borne Kodak – remise en service" /></figure>
+          <h3 style="margin-top:12px">Borne Kodak — Phase de remise en service</h3>
+          <p class="muted">
+            Validation du flux réseau et de la communication avec le serveur central. Tests de stabilité et délais de transfert en conditions réelles.
+          </p>
         </article>
 
-        <!-- Imprimantes (écran paramètres) -->
+        <!-- PRINTER 1 -->
         <article class="card">
-          <img class="thumb" src="printer2.jpg" alt="Déploiement d’imprimantes multi-postes">
-          <div class="body">
-            <h3 style="margin:0 0 6px">Déploiement d’imprimantes réseau — Multi-postes</h3>
-            <p class="muted" style="margin:0">
-              Mise en service sous DHCP, configuration IP, partage multi-utilisateurs. Intégration au réseau local et serveur d’impression intégré.
-            </p>
-          </div>
+          <figure><img class="thumb" src="printer1.jpg" alt="Déploiement d’imprimantes réseau – multi-postes" /></figure>
+          <h3 style="margin-top:12px">Déploiement d’imprimantes réseau — Multi-postes</h3>
+          <p class="muted">
+            Mise en service sous DHCP, configuration IP, partage multi-utilisateurs. Intégration au réseau local et serveur d’impression intégré.
+          </p>
         </article>
 
-        <!-- Imprimantes (console web) -->
+        <!-- PRINTER 2 -->
         <article class="card">
-          <img class="thumb" src="printer1.jpg" alt="Administration via interface web HP">
-          <div class="body">
-            <h3 style="margin:0 0 6px">Administration via interface web — Imprimantes HP</h3>
-            <p class="muted" style="margin:0">
-              Tests de connectivité, paramétrage comptes, suivi de files et réglages réseau via l’interface embarquée.
-            </p>
-          </div>
+          <figure><img class="thumb" src="printer2.jpg" alt="Administration via interface web — imprimantes HP" /></figure>
+          <h3 style="margin-top:12px">Administration via interface web — Imprimantes HP</h3>
+          <p class="muted">
+            Tests de connectivité, gestion de pool d’impression, paramétrage comptes, suivi des logs et réglages réseau sur interface embarquée.
+          </p>
         </article>
 
-        <!-- Rack vidéo & serveurs -->
+        <!-- RACK -->
         <article class="card">
-          <img class="thumb" src="rack1.jpg" alt="Rack réseau / NVR / serveurs">
-          <div class="body">
-            <h3 style="margin:0 0 6px">Maintenance d’infrastructure vidéo & serveurs locaux</h3>
-            <p class="muted" style="margin:0">
-              Contrôle d’un rack complet : switchs, routeurs, NVR, stockage. Vérification du câblage, caméras IP et supervision vidéo.
-            </p>
-          </div>
+          <figure><img class="thumb" src="rack1.jpg" alt="Maintenance d’infrastructure vidéo & serveurs locaux" /></figure>
+          <h3 style="margin-top:12px">Maintenance d’infrastructure vidéo & serveurs locaux</h3>
+          <p class="muted">
+            Contrôle d’un rack complet : switches, routeurs, NVR, stockage. Vérification du câblage, caméras IP et supervision vidéo.
+          </p>
         </article>
       </div>
     </section>
 
-    <!-- Formations & Certifs -->
-    <section id="edu">
-      <div class="kicker"><span class="bar"></span>Formations & Certifications</div>
-      <p class="muted" style="margin-top:-6px">Documents hébergés dans <code>/docs</code>. Tous les liens pointent vers les originaux PDF.</p>
-
-      <table>
-        <thead>
+    <!-- FORMATIONS / CERTIFS -->
+    <section id="edu" class="section">
+      <h2>Formations & Certifications</h2>
+      <p class="muted">Documents hébergés dans <code>/docs</code>. Les liens pointent vers les originaux PDF.</p>
+      <div class="card" style="padding:0">
+        <table>
+          <thead>
           <tr>
-            <th style="width:80px">Année</th>
+            <th>Année</th>
             <th>Titre / Organisme</th>
             <th>Compétences principales</th>
-            <th style="width:260px">Document</th>
+            <th>Document</th>
           </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
           <tr>
             <td>2025</td>
             <td>Technicien en Informatique — IFAGE (Genève)</td>
@@ -255,190 +212,27 @@
             <td>Management · Gestion · Systèmes d’information</td>
             <td><a href="docs/bac.pdf">Diplôme STMG</a></td>
           </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="kicker"><span class="bar"></span>Contact</div>
-      <footer class="panel">
-        <div class="contacts">
-          Email : <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
-          GitHub : <a href="https://github.com/alymohamedev">github.com/alymohamedev</a> ·
-          LinkedIn : <a href="https://www.linkedin.com/in/alymohamedev">linkedin.com/in/alymohamedev</a>
-        </div>
-      </footer>
+    <!-- CONTACT -->
+    <section id="contact" class="section card">
+      <h2>Contact</h2>
+      <p>
+        Email : <a href="mailto:aly.mohamedev@proton.me">aly.mohamedev@proton.me</a> ·
+        GitHub : <a href="https://github.com/alymohamedev">github.com/alymohamedev</a> ·
+        LinkedIn : <a href="https://www.linkedin.com/in/alymohamedev">linkedin.com/in/alymohamedev</a>
+      </p>
     </section>
-<!-- Annexes techniques -->
-<section id="annexes">
-  <div class="kicker"><span class="bar"></span>Annexes techniques</div>
-
-  <!-- Topologie & plan IP -->
-  <div class="panel" style="padding:14px">
-    <div class="pill">Topologie & plan d’adressage</div>
-    <p class="muted" style="margin:8px 0 12px">
-      Exemple de segmentation simple pour PME (switch L3 + Wi-Fi + imprimantes en IP fixe). Adaptable selon contexte client.
-    </p>
-
-    <!-- Schéma (optionnel) -->
-    <figure class="panel" style="padding:0;border:1px dashed #e5e7eb">
-      <!-- Dépose un PNG du schéma dans la racine sous le nom 'topologie.png' -->
-      <img src="topologie.png" alt="Schéma de topologie (exemple)" style="width:100%;max-height:420px;object-fit:contain;background:#f8fafc">
-      <figcaption class="muted" style="padding:8px 12px">Schéma indicatif : cœur L3, VLAN utilisateurs/imprimantes/IoT, trunk vers borne Wi-Fi.</figcaption>
-    </figure>
-
-    <!-- Tableau IP -->
-    <div class="panel" style="padding:0;overflow:auto;margin-top:12px">
-      <table>
-        <thead>
-          <tr>
-            <th>VLAN</th>
-            <th>Usage</th>
-            <th>Plage</th>
-            <th>Passerelle</th>
-            <th>DHCP</th>
-            <th>DNS</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10</td><td>Utilisateurs</td><td>192.168.10.0/24</td><td>192.168.10.1</td><td>192.168.10.50-200</td><td>192.168.10.10</td><td>Postes Windows, M365</td>
-          </tr>
-          <tr>
-            <td>20</td><td>Imprimantes</td><td>192.168.20.0/24</td><td>192.168.20.1</td><td>Réservations</td><td>192.168.10.10</td><td>IP fixes + réservations</td>
-          </tr>
-          <tr>
-            <td>30</td><td>Vidéo/NVR</td><td>192.168.30.0/24</td><td>192.168.30.1</td><td>—</td><td>—</td><td>Caméras, NVR, accès restreint</td>
-          </tr>
-          <tr>
-            <td>99</td><td>Gestion</td><td>192.168.99.0/24</td><td>192.168.99.1</td><td>—</td><td>—</td><td>Management switches/AP/NAS</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- Cisco IOS (extraits) -->
-  <div class="panel" style="padding:14px;margin-top:18px">
-    <div class="pill">Cisco IOS – VLAN/SVI, DHCP, ACL (exemple)</div>
-    <pre style="white-space:pre-wrap;margin:10px 0"><code>! VLANs & SVI (switch L3)
-conf t
-vlan 10
- name USERS
-vlan 20
- name PRINTERS
-vlan 30
- name VIDEO
-vlan 99
- name MGMT
-!
-interface Vlan10
- ip address 192.168.10.1 255.255.255.0
- no shut
-interface Vlan20
- ip address 192.168.20.1 255.255.255.0
- no shut
-interface Vlan30
- ip address 192.168.30.1 255.255.255.0
- no shut
-interface Vlan99
- ip address 192.168.99.1 255.255.255.0
- no shut
-!
-! Trunk vers switch d'accès / AP
-interface GigabitEthernet1/0/48
- switchport trunk encapsulation dot1q
- switchport mode trunk
- switchport trunk allowed vlan 10,20,30,99
-!
-! DHCP locaux (optionnel)
-ip dhcp excluded-address 192.168.10.1 192.168.10.49
-ip dhcp pool VLAN10
- network 192.168.10.0 255.255.255.0
- default-router 192.168.10.1
- dns-server 192.168.10.10
-!
-! ACL: autoriser Users -> Printers uniquement TCP/9100,515,631
-ip access-list extended USERS-TO-PRN
- permit tcp 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 9100
- permit tcp 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 515
- permit tcp 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 631
- deny   ip  192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
- permit ip  any any
-!
-interface Vlan20
- ip access-group USERS-TO-PRN in
-end
-wr mem
-</code></pre>
-  </div>
-
-  <!-- PowerShell / Windows -->
-  <div class="grid cols-2" style="margin-top:18px">
-    <div class="panel" style="padding:14px">
-      <div class="pill">PowerShell – imprimantes & tests</div>
-      <pre style="white-space:pre-wrap;margin:10px 0"><code># Ajouter une imprimante TCP/IP + pilote
-$ip = "192.168.20.25"
-$port = "IP_$ip"
-Add-PrinterPort -Name $port -PrinterHostAddress $ip
-Add-PrinterDriver -Name "HP Universal Printing PCL 6" -ErrorAction SilentlyContinue
-Add-Printer -Name "HP-Repro-01" -DriverName "HP Universal Printing PCL 6" -PortName $port
-
-# Test de connectivité rapide
-Test-Connection -ComputerName $ip -Count 3
-
-# Partage d'imprimante depuis un hôte d'impression
-Set-Printer -Name "HP-Repro-01" -Shared $true -ShareName "HP-Repro-01"
-</code></pre>
-    </div>
-
-    <div class="panel" style="padding:14px">
-      <div class="pill">Active Directory – création utilisateur & groupage</div>
-      <pre style="white-space:pre-wrap;margin:10px 0"><code>Import-Module ActiveDirectory
-
-# Créer un utilisateur standard dans une OU
-New-ADUser -Name "Jean Dupont" -GivenName Jean -Surname Dupont `
-  -SamAccountName jdupont -UserPrincipalName j.dupont@entreprise.local `
-  -Path "OU=Users,OU=Site-A,DC=entreprise,DC=local" -Enabled $true `
-  -ChangePasswordAtLogon $true
-
-# Ajouter au groupe d'impression ou service
-Add-ADGroupMember -Identity "GRP-Impression" -Members jdupont
-</code></pre>
-    </div>
-  </div>
-
-  <!-- Sauvegardes & transferts -->
-  <div class="panel" style="padding:14px;margin-top:18px">
-    <div class="pill">Sauvegardes & transferts (exemples rapides)</div>
-    <pre style="white-space:pre-wrap;margin:10px 0"><code>:: Robocopy : snapshot simple vers NAS avec journal
-robocopy "C:\Data" "\\NAS01\Backup\Data" /MIR /R:2 /W:2 /FFT /Z /NP /LOG+:C:\Logs\backup.log
-
-# Linux/macOS -> NAS (rsync)
-rsync -a --delete /data/  nas01:/volume1/backup/data/
-</code></pre>
-    <p class="muted" style="margin:6px 0 0">
-      En prod : planifier (Task Scheduler / cron), versionner, et tester la restauration.
-    </p>
-  </div>
-
-  <!-- Aide diag -->
-  <div class="panel" style="padding:14px;margin-top:18px">
-    <div class="pill">Diag express</div>
-    <ul class="muted" style="margin:6px 0 0;line-height:1.6">
-      <li>Connexions : <code>ping</code>, <code>tracert</code>, <code>arp -a</code>, <code>ipconfig /all</code></li>
-      <li>Wireshark : filtres utiles – <code>ip.addr==192.168.20.25</code>, <code>tcp.port==9100</code></li>
-      <li>Imprimantes : vérifier file d’attente locale, port TCP/IP, pilote, puis partage.</li>
-      <li>Caméras/NVR : vérifier PoE, VLAN d’isolation, route/ACL vers le NVR uniquement.</li>
-    </ul>
-  </div>
-</section>
-
   </main>
 
-  <!-- Vérification légère des images : met un contour rouge et log si non chargées -->
+  <footer class="wrap">
+    © Mohamed Aly — Portfolio personnel. Dernière mise à jour automatique via GitHub Pages.
+  </footer>
+
+  <!-- Sécurisation douce : si une image ne charge pas, on met une bordure et un alt explicite -->
   <script>
     (function () {
       const imgs = document.querySelectorAll('img.thumb');

@@ -1,0 +1,41 @@
+@import "jekyll-theme-minimal";
+
+body {
+  background-color: #f7f8fa; /* fond clair */
+  color: #222;
+}
+
+a {
+  color: #8a5efc; /* violet de ton logo */
+}
+
+h1, h2, h3, h4 {
+  color: #6c3ef8;
+}
+
+img {
+  border-radius: 12px;
+}
+
+header {
+  border-bottom: 2px solid #8a5efc;
+}
+
+footer {
+  margin-top: 3em;
+  font-size: 0.9em;
+  color: #666;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 2em 0;
+}
+
+footer a {
+  color: #8a5efc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
